@@ -72,40 +72,43 @@ document.getElementById('boton-microfono').addEventListener('click', function(ev
 function buscarSugerencias() {
     const termino = document.getElementById('campo-de-busqueda').value;
     const resultadosDiv = document.getElementById('resultados-busqueda');
-
+  
     if (termino.length > 0) {
-        fetch(`/buscar?q=${encodeURIComponent(termino)}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.length === 0) {
-                    resultadosDiv.style.display = 'none';
-                } else {
-                    resultadosDiv.style.display = 'block';
-                    resultadosDiv.innerHTML = '';
-                    const resultadosLimitados = data.slice(0, 5);
-
-                    resultadosLimitados.forEach(palabra => {
-                        const div = document.createElement('div');
-                        div.className = 'resultado-item';
-                        div.textContent = palabra;
-
-                        div.addEventListener('click', function() {
-                            document.getElementById('campo-de-busqueda').value = palabra;
-                            window.location.hash = '#detalles-palabra';
-                            resultadosDiv.style.display = 'none';
-                            desactivarMicrofono();
-                            obtenerPalabras(palabra);
-                        });
-
-                        resultadosDiv.appendChild(div);
-                    });
-                }
-            })
-            .catch(error => console.error('Error al buscar:', error));
-    } else {
+      // Filtra las palabras de 'words_table' que contienen el término de búsqueda
+      const resultados = words_table.filter(palabra => {
+        return palabra.nombre.toLowerCase().includes(termino.toLowerCase());
+      });
+  
+      if (resultados.length === 0) {
         resultadosDiv.style.display = 'none';
+      } else {
+        resultadosDiv.style.display = 'block';
+        resultadosDiv.innerHTML = ''; // Limpiar resultados previos
+  
+        // Limitar los resultados a los primeros 5
+        const resultadosLimitados = resultados.slice(0, 5);
+  
+        resultadosLimitados.forEach(palabra => {
+          const div = document.createElement('div');
+          div.className = 'resultado-item';
+          div.textContent = palabra.nombre; // Mostrar solo el nombre de la palabra
+  
+          // Evento de clic para seleccionar una palabra
+          div.addEventListener('click', function() {
+            document.getElementById('campo-de-busqueda').value = palabra.nombre;
+            window.location.hash = '#detalles-palabra';
+            resultadosDiv.style.display = 'none';
+            desactivarMicrofono();
+            obtenerPalabras(palabra.nombre);
+          });
+  
+          resultadosDiv.appendChild(div);
+        });
+      }
+    } else {
+      resultadosDiv.style.display = 'none';
     }
-}
+  }  
 
 // Desactivar el micrófono
 function desactivarMicrofono() {
@@ -221,36 +224,36 @@ function obtenerPalabras(palabraSeleccionada) {
 }*/
 
 function obtenerPalabras(palabraSeleccionada) {
-    fetch('/obtener_palabras')
-        .then(response => response.json())
-        .then(data => {
-            if (data.length > 0) {
-                let listaModificada = [...data];
-
-                // Siempre ordenamos la lista de palabras basada en la distancia de Levenshtein
-                listaModificada.sort((a, b) => {
-                    // Normalizamos las palabras de la lista y la palabra seleccionada
-                    const palabraNormalizada = normalizarPalabra(palabraSeleccionada);
-                    const palabraA = normalizarPalabra(a.nombre);
-                    const palabraB = normalizarPalabra(b.nombre);
-
-                    // Calcula la distancia de Levenshtein entre la palabra seleccionada y las palabras de la lista
-                    const distanciaA = calcularDistanciaLevenshtein(palabraNormalizada, palabraA);
-                    const distanciaB = calcularDistanciaLevenshtein(palabraNormalizada, palabraB);
-
-                    return distanciaA - distanciaB; // Ordena de menor a mayor distancia
-                });
-
-                console.log('Lista modificada y ordenada:', listaModificada);
-
-                // Llama a la función en el segundo archivo para actualizar la interfaz con la nueva lista ordenada
-                actualizarInterfazConNuevasPalabras(listaModificada);
-            } else {
-                console.warn('La lista de palabras está vacía');
-            }
-        })
-        .catch(error => console.error('Error al obtener palabras:', error));
-}
+    try {
+      // Usamos directamente la variable 'words_table' desde 'datos.js'
+      if (words_table.length > 0) {
+        let listaModificada = [...words_table];
+  
+        // Siempre ordenamos la lista de palabras basada en la distancia de Levenshtein
+        listaModificada.sort((a, b) => {
+          // Normalizamos las palabras de la lista y la palabra seleccionada
+          const palabraNormalizada = normalizarPalabra(palabraSeleccionada);
+          const palabraA = normalizarPalabra(a.nombre);
+          const palabraB = normalizarPalabra(b.nombre);
+  
+          // Calcula la distancia de Levenshtein entre la palabra seleccionada y las palabras de la lista
+          const distanciaA = calcularDistanciaLevenshtein(palabraNormalizada, palabraA);
+          const distanciaB = calcularDistanciaLevenshtein(palabraNormalizada, palabraB);
+  
+          return distanciaA - distanciaB; // Ordena de menor a mayor distancia
+        });
+  
+        console.log('Lista modificada y ordenada:', listaModificada);
+  
+        // Llama a la función en el segundo archivo para actualizar la interfaz con la nueva lista ordenada
+        actualizarInterfazConNuevasPalabras(listaModificada);
+      } else {
+        console.warn('La lista de palabras está vacía');
+      }
+    } catch (error) {
+      console.error('Error al obtener palabras:', error);
+    }
+  }  
 
 // Función para calcular la distancia de Levenshtein entre dos palabras
 function calcularDistanciaLevenshtein(str1, str2) {

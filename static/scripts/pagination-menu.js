@@ -1,25 +1,16 @@
 let palabras = [];
 
-// Cargar las palabras desde el archivo JSON local y agruparlas de 3 en 3
-async function cargarPalabras() {
+// Cargar las palabras directamente desde la constante 'words_table' definida en 'datos.js' y agruparlas de 3 en 3
+function cargarPalabras() {
   try {
-    // Asegúrate de que el archivo JSON está disponible en el mismo directorio o usa una ruta relativa
-    const response = await fetch('dictionary-database/words-table.json');
-    
-    if (!response.ok) throw new Error('Error al obtener las palabras');
-    
-    // Convertir la respuesta en formato JSON
-    const datos = await response.json();
-    
     // Agrupar las palabras en grupos de 3
-    for (let i = 0; i < datos.length; i += 3) {
+    for (let i = 0; i < words_table.length; i += 3) {
       palabras.push([
-        datos[i], 
-        datos[i + 1] || {},  // Si no hay palabra, se usa un objeto vacío
-        datos[i + 2] || {}
+        words_table[i], 
+        words_table[i + 1] || {},  // Si no hay palabra, se usa un objeto vacío
+        words_table[i + 2] || {}
       ]);
     }
-    
     console.log(palabras);
     actualizarInterfaz();
   } catch (error) {
@@ -195,10 +186,10 @@ function mostrarPalabras(index) {
                 <span class="texto">Aa</span>
             </div>
             <div class="contenido-derecho">
-                <p class="palabra">${(palabra.nombre || '-').toLowerCase()}</p>
-                <p class="categoria">(<i>${(palabra.idioma || '-').toLowerCase()}, ${(palabra.categoria || '-').toLowerCase()})</i></p>
-                <p class="descripcion">${(palabra.descripcion || '-').toLowerCase()}</p>
-                <p class="fecha-ingreso">${(palabra.fecha_agregado || '-').toLowerCase()}</p>
+                <p class="palabra">${(palabra.nombre || '').toLowerCase()}</p>
+                <p class="categoria">(<i>${(palabra.idioma || '').toLowerCase()}, ${(palabra.categoria || '').toLowerCase()})</i></p>
+                <p class="descripcion">${(palabra.descripcion || '').toLowerCase()}</p>
+                <p class="fecha-ingreso">${(palabra.fecha_agregado || '').toLowerCase()}</p>
             </div>
           </div>
         `;

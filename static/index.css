@@ -31,11 +31,11 @@ body {
         inset 1.9vh 1.9vh 1.9vh rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     display: flex;
-    height: 90vh;
+    height: 80vh;
     justify-content: center;
     overflow: hidden;
     position: relative;
-    width: calc(90vh * 9 / 16);
+    width: calc(80vh * 9 / 16);
 }
 
 

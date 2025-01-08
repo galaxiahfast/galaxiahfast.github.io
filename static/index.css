@@ -1,0 +1,523 @@
+
+
+
+/* Ubicación: Pantalla > Pantalla Celular > */
+
+
+
+body {
+    align-items: center;
+    background-color: #d2d2d2;
+    color: black;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.74vh;
+    justify-content: center;
+    line-height: 0;
+    margin: 0;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.contenedor-pantalla-celular {
+    background-color: #e3e3e3;
+    background-size: cover;
+    border-radius: 2.5vh;
+    box-shadow:
+        1.5vh 1.5vh 1.5vh rgba(0, 0, 0, 0.5),
+        -2vh -2vh 2vh rgba(255, 255, 255, 0.2),
+        inset -.5vh -.5vh .5vh rgba(0, 0, 0, 0.5),
+        inset 1.9vh 1.9vh 1.9vh rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    width: calc(90vh * 9 / 16);
+}
+
+
+
+/* Ubicación: Pantalla > Pantalla Celular > Primer Contenedor > */
+
+
+
+.contenedor-pantalla-celular .primer-contenedor {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+
+.contenedor-pantalla-celular .primer-contenedor .primer-subcontenedor {
+    align-items: center;
+    display: flex;
+    gap: 1.5vh;
+    margin-right: 0;
+}
+
+.contenedor-pantalla-celular .primer-contenedor .primer-subcontenedor img {
+    height: 1.87vh;
+    width: auto;
+}
+
+
+
+.contenedor-pantalla-celular .primer-contenedor .segundo-subcontenedor {
+    align-items: center;
+    background-color: black;
+    border-radius: 0 0 1vh 1vh;
+    box-sizing: border-box;
+    display: flex;
+    height: 4vh;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0vh;
+    width: 14vh;
+}
+
+.contenedor-pantalla-celular .primer-contenedor .segundo-subcontenedor .luz {
+    background-color: #e3e3e3;
+    border-radius: 5vh;
+    height: 1.39vh;
+    margin-right: 1.5vh;
+    width: 6.95vh;
+}
+
+.contenedor-pantalla-celular .primer-contenedor .segundo-subcontenedor .camara {
+    background-color: #e3e3e3;
+    border-radius: 50%; 
+    height: 1.39vh; 
+    width: 1.39vh;
+}
+
+
+
+.contenedor-pantalla-celular .primer-contenedor .tercer-subcontenedor {
+    align-items: center;
+    display: flex;
+    gap: 1.5vh;
+}
+
+.contenedor-pantalla-celular .primer-contenedor .tercer-subcontenedor img {
+    height: 1.87vh;
+    width: 1.87vh;
+}
+
+.contenedor-pantalla-celular .primer-contenedor .tercer-subcontenedor .bateria {
+    align-items: center;
+    display: flex;
+    gap: .1vh;
+}
+
+
+
+/* Ubicación: Celular > Pantalla > Tercer Contenedor > */
+
+
+
+.contenedor-pantalla-celular .tercer-contenedor {
+    align-items: center;
+    bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    padding: 3vh 0;
+    position: absolute;
+    width: 100%;
+}
+
+.contenedor-pantalla-celular .tercer-contenedor .linea {
+    background-color: black;
+    border-radius: 1.39vh;
+    height: 0.695vh;
+    margin: auto;
+    width: 22.25vh;
+}
+
+
+
+/* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > */
+
+
+
+.contenedor-pantalla-celular .segundo-contenedor {
+    bottom: 6.8vh;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    padding: 0 3vh;
+    position: absolute;
+    top: 7.9vh;
+    width: 100%;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > Primer Subcontenedor > */
+
+
+
+.contenedor-pantalla-celular .segundo-contenedor .primer-subcontenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .primer-subcontenedor p {
+    margin: 0;
+    line-height: normal;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .primer-subcontenedor .icono-notificacion {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .primer-subcontenedor .icono-notificacion img {
+    height: 2.4vh;
+    width: auto;
+}
+
+
+
+/* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > Segundo Subcontenedor > */
+
+
+
+.contenedor-pantalla-celular .segundo-contenedor .segundo-subcontenedor {
+    margin: 11.14vh 0 3vh 0;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .segundo-subcontenedor .titulo {
+    font-size: 3.97vh;
+    font-weight: 400;
+    line-height: 1.5vh;
+    margin: 0 0 3vh 0;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .segundo-subcontenedor .titulo:last-child {
+    margin-bottom: 0;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .segundo-subcontenedor .titulo .texto-resaltado {
+    color: #930000;
+    font-weight: 400; 
+}
+
+
+
+/* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > Tercer Subcontenedor > */
+
+
+
+.contenedor-pantalla-celular .segundo-contenedor .tercer-subcontenedor {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 6vh 0 6vh 0;
+    width: 100%;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .tercer-subcontenedor .primer-subsubcontenedor {
+    align-items: center;
+    background-color: white;
+    border-radius: 6.95vh;
+    box-shadow: inset 0.28vh 0.28vh 1.11vh rgba(13, 39, 80, 0.36), 
+                inset -0.28vh -0.28vh 1.11vh rgba(255, 255, 255, 0.64);
+    display: flex;
+    flex-grow: 1;
+    padding: 1.5vh 3vh 1.5vh 3vh;
+    position: relative;
+    width: auto;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .tercer-subcontenedor .primer-subsubcontenedor .icono-de-lupa {
+    filter: grayscale(100%) !important;
+    height: 1.87vh; width: 1.87vh;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .tercer-subcontenedor .primer-subsubcontenedor .campo-de-busqueda {
+    background-color: transparent;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.74vh;
+    margin-left: 2.22vh;
+    padding: 0;
+    outline: none;
+    width: 100%;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .tercer-subcontenedor .primer-subsubcontenedor .campo-de-busqueda::placeholder {
+    color: gray;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.74vh;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .tercer-subcontenedor .primer-subsubcontenedor .icono-tres-puntos {
+    margin-left: auto;
+    width: 1.87vh;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .tercer-subcontenedor .segundo-subsubcontenedor {
+    align-items: center;
+    border-radius: 100%;
+    box-shadow: 0.28vh 0.28vh 1.11vh rgba(13, 39, 80, 0.36), 
+                -0.28vh -0.28vh 1.11vh rgba(255, 255, 255, 0.64);
+    display: flex;
+    justify-content: center;
+    margin-left: 1.5vh;
+    padding: 1.74vh;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .tercer-subcontenedor .segundo-subsubcontenedor .icono-de-microfono {
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .tercer-subcontenedor .segundo-subsubcontenedor .icono-de-microfono img {
+    width: 1.87vh;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.resultados-busqueda {
+    backdrop-filter: blur(.5vh);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 1.5vh;
+    box-sizing: border-box;
+    display: none;
+    left: 0;
+    padding: 3vh;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+
+.resultado-item {
+    border-radius: 1.5vh;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 1.5vh 4vh;
+}
+
+.resultado-item:not(:last-child) {
+    margin-bottom: 3vh;
+}
+
+.resultado-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 6.1vh rgba(0, 0, 0, 0.2);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+
+/* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > Cuarto Subcontenedor > */
+
+
+
+.contenedor-pantalla-celular .segundo-contenedor .cuarto-subcontenedor {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .cuarto-subcontenedor #informacion-palabras {
+    width: 100%;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .cuarto-subcontenedor .contenido {
+    aspect-ratio: 2 / 1;
+    border-radius: 1.5vh;
+    box-shadow: 0.28vh 0.28vh 1.11vh rgba(13, 39, 80, 0.36), 
+                -0.28vh -0.28vh 1.11vh rgba(255, 255, 255, 0.64);
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin: 0 1vh 1vh 1vh;
+    margin-bottom: 3vh;
+    overflow: hidden;
+    width: auto;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .cuarto-subcontenedor .contenido .contenido-izquierdo {
+    border-right: .1vh solid #930000;
+    height: auto;
+    line-height: 1;
+    margin: 3vh 0px 3vh 3vh;
+    padding-right: 1.5vh;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .cuarto-subcontenedor .contenido .contenido-izquierdo .texto {
+    top: 0;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .cuarto-subcontenedor .contenido .contenido-derecho {
+    height: auto;
+    margin: 3vh 3vh 3vh 1.5vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .cuarto-subcontenedor .contenido .contenido-derecho .palabra {
+    font-size: 3.97vh;
+    line-height: 1;
+    margin: 0 0 1.5vh 0;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .cuarto-subcontenedor .contenido .contenido-derecho .categoria {
+    color: #930000;
+    line-height: 1;
+    margin: 0 0 1.5vh 0;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .cuarto-subcontenedor .contenido .contenido-derecho .descripcion {
+    display: block;
+    font-weight: 400;
+    line-height: 1;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    white-space: nowrap;
+
+    background-color: transparent;
+    
+    position: relative;
+    -webkit-mask-image: linear-gradient(to right, black, black 90%, transparent);
+    mask-image: linear-gradient(to right, black, black 90%, transparent);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .cuarto-subcontenedor .contenido .contenido-derecho .descripcion::-webkit-scrollbar {
+    display: none;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .cuarto-subcontenedor .contenido .contenido-derecho .descripcion::-webkit-scrollbar {
+    display: none;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor .cuarto-subcontenedor .contenido .contenido-derecho .fecha-ingreso {
+    bottom: 0;
+    height: 100%;
+    line-height: 1;
+    margin-bottom: 0;
+    margin-top: auto;
+    text-align: right;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.contenedor-de-menu-de-paginacion {
+    align-items: center;
+    border-radius: 50px;
+    display: flex; 
+    gap: 12px;
+    justify-content: center; 
+    padding: 0px 12px;
+    width: fit-content;
+
+    margin-bottom: 6vh;
+}
+
+.contenedor-de-menu-de-paginacion img {
+    height: 15px;   
+    width: auto;
+}
+
+.contenedor-de-menu-de-paginacion button {
+    aspect-ratio: 1;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 25%;
+    box-shadow: inset 2px 2px 8px rgba(13, 39, 80, 0.36), inset -2px -2px 8px rgba(255, 255, 255, 0.64);
+    color: grey;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    height: 40px;
+    width: auto;
+}
+
+.contenedor-de-menu-de-paginacion button.active {
+    background-color: rgb(40, 40, 40);
+    box-shadow: 
+        inset -2px -2px 8px rgba(13, 39, 80, 1), 
+        inset 2px 2px 8px rgba(255, 255, 255, 0.5),
+        2px 2px 8px rgba(0, 0, 0, 0.6), 
+        -2px -2px 8px rgba(255, 255, 255, 0.3); 
+    color: gray;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > Quinto Subcontenedor > */
+
+
+.contenedor-central-celular-enlaces-principales {
+    display: flex;
+}
+
+.contenedor-central-celular-enlaces-principales-iconos {
+    margin-right: 20px;
+    width: 100%;
+}
+
+.contenedor-central-celular-enlaces-principales-iconos:last-child {
+    margin-right: 0;
+}
+
+.contenedor-central-celular-enlaces-principales-iconos-cajas {
+    align-items: center;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contenedor-central-celular-enlaces-principales-iconos-cajas img {
+    filter: invert(1);
+    height: 15px;
+    width: 15px;
+}
+
+.contenedor-central-celular-enlaces-principales-iconos-nombres {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+

@@ -1,0 +1,16 @@
+[
+  {
+  "nombre": "perro",
+  "idioma": "español",
+  "categoria": "animal",
+  "descripcion": "mamífero doméstico",
+  "fecha_agregado": "2025-01-01"
+},
+{
+  "nombre": "gato",
+  "idioma": "español",
+  "categoria": "animal",
+  "descripcion": "mamífero ágil",
+  "fecha_agregado": "2025-01-02"
+}
+]

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/index.css">
+    <script src="static/scripts/database.js"></script>
+    
+</head>
+<body>
+
+
+
+    <!-- Ubicación: Pantalla > Pantalla Celular > -->
+
+
+
+    <div class="contenedor-pantalla-celular">
+
+
+
+        <!-- Ubicación: Pantalla > Pantalla Celular > Primer Contenedor > -->
+
+
+
+        <div class="primer-contenedor">
+            <div class="primer-subcontenedor">
+                <div>23:23</div>
+                <img src="static/images/mobile-phone-icons/instagram.png" alt="Instagram">
+                <img src="static/images/mobile-phone-icons/whatsapp.png" alt="WhatsApp">
+                <!-- <img src="static/images/mobile-phone-icons/whatsapp.png" alt="WhatsApp"> -->
+            </div>
+            <div class="segundo-subcontenedor">
+                <div class="light"></div>
+                <div class="camera"></div>
+            </div>
+            <div class="tercer-subcontenedor">
+                <img src="static/images/mobile-phone-icons/wi-fi.png" alt="Wi-Fi">
+                <!-- <img src="static/images/mobile-phone-icons/mobile-data.png" alt="Mobile Data"> -->
+                <div class="battery">
+                    <span>22%</span>
+                    <img src="static/images/mobile-phone-icons/battery.png" alt="Battery">
+                </div>
+            </div>
+        </div>        
+        
+        
+
+        <!-- Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > -->
+
+
+
+        <div class="segundo-contenedor">
+
+
+
+            <!-- Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > Primer Subcontenedor > -->
+
+
+
+            <div class="primer-subcontenedor">
+                <p>Morning, Emiliano</p>
+                <div class="icono-notificacion">
+                    <img src="static/images/mobile-phone-app-icons/notifications.png" alt="Notification">
+                </div>
+            </div>
+
+
+
+            <!-- Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > Segundo Subcontenedor > -->
+
+
+
+            <div class="segundo-subcontenedor"> 
+                <h2 class="titulo">Which word do you</h2>
+                <h2 class="titulo">wish to <span class="texto-resaltado">search?</span></h2>
+            </div> 
+
+
+
+            <!-- Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > Tercer Subcontenedor > -->
+
+
+
+            <div class="tercer-subcontenedor">
+                <div class="primer-subsubcontenedor">
+                    <img src="static/images/mobile-phone-app-icons/search/magnifying-glass.png" class="icono-de-lupa" alt="Magnifying Glass">
+                    <input type="text" id="campo-de-busqueda" placeholder="category, letter, word" class="campo-de-busqueda" onkeyup="buscarSugerencias()" onfocus="mostrarResultadosBusqueda()" onblur="ocultarResultadosBusqueda()" onclick="seleccionarTexto()">
+                    <img src="static/images/mobile-phone-app-icons/search/three-dots.png" class="icono-tres-puntos" alt="Three Dots">
+                    <div id="resultados-busqueda" class="resultados-busqueda"></div>
+                </div>
+                <div class="segundo-subsubcontenedor">
+                    <button class="icono-de-microfono" id="boton-microfono">
+                        <img src="static/images/mobile-phone-app-icons/search/microphone.png" alt="Microphone">
+                    </button>
+                </div>
+            </div>            
+            
+            <script src="static/scripts/word-searcher.js"></script>
+
+
+
+            <!-- Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > Cuarto Subcontenedor > -->
+
+            
+
+            <div class="cuarto-subcontenedor">
+                <div id="informacion-palabras"></div>
+                <div class="contenedor-de-menu-de-paginacion">
+                    <img src="static/images/mobile-phone-app-icons/search/left-arrow.png" class="icono-flecha" id="prev" alt="Left Arrow">
+                    <button id="primero" class="active">1</button>
+                    <button>dinamico</button>
+                    <button>dinamico</button>
+                    <button>dinamico</button>
+                    <button id="ultimo"></button>
+                    <img src="static/images/mobile-phone-app-icons/search/right-arrow.png" class="icono-flecha" id="next" alt="Right Arrow">
+                </div>
+            </div>
+            
+            <script src="static/scripts/pagination-menu.js"></script>
+
+
+
+            <!-- Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > Quinto Subcontenedor > -->
+
+            
+        
+            
+            
+            
+            
+            <div class="contenedor-central-celular-enlaces-principales">
+
+                <div class="contenedor-central-celular-enlaces-principales-iconos">
+                    <div class="contenedor-central-celular-enlaces-principales-iconos-cajas">
+                        <img src="{{ url_for('static', filename='imagen/iconos-de-celular/carga-en-la-nube.png') }}" alt="Cloud">
+                    </div>
+                    <div class="contenedor-central-celular-enlaces-principales-iconos-nombres">Arm</div>
+                </div>
+                <div class="contenedor-central-celular-enlaces-principales-iconos">
+                    <div class="contenedor-central-celular-enlaces-principales-iconos-cajas">
+                        <img src="{{ url_for('static', filename='imagen/iconos-de-celular/alrededor-del-mundo.png') }}" alt="World">
+                    </div>
+                    <div class="contenedor-central-celular-enlaces-principales-iconos-nombres">Leg</div>
+                </div>
+                <div class="contenedor-central-celular-enlaces-principales-iconos">
+                    <div class="contenedor-central-celular-enlaces-principales-iconos-cajas">
+                        <img src="{{ url_for('static', filename='imagen/iconos-de-celular/edicion-musical.png') }}" alt="Music Edit">
+                    </div>
+                    <div class="contenedor-central-celular-enlaces-principales-iconos-nombres">Forearm</div>
+                </div>
+
+            </div>
+
+            <!------------------------------------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------------------------------------>
+
+            <div class="contenedor-central-celular-formulario-bicep">
+
+            </div>
+            
+            <!------------------------------------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------------------------------------>
+            <!------------------------------------------------------------------------------------------------------------------------------------>
+
+        </div>
+
+
+
+        <!-- Ubicación: Celular > Pantalla > Tercer Contenedor > -->
+
+
+
+        <div class="tercer-contenedor"><div class="linea"></div></div>
+
+    </div>
+
+</body>
+</html>

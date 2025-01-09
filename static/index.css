@@ -179,11 +179,6 @@ body {
 /* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > */
 
 
-.content-container{
-    border: .1vh solid #930000;
-    width: 100%;
-}
-
 
 .contenedor-pantalla-celular .segundo-contenedor {
     bottom: 6.8vh;
@@ -240,7 +235,7 @@ body {
 .contenedor-pantalla-celular .segundo-contenedor .segundo-subcontenedor .titulo {
     font-size: 3.97vh;
     font-weight: 400;
-    line-height: 1.5vh;
+    line-height: 1.2;
     margin: 0 0 3vh 0;
 }
 
@@ -256,6 +251,8 @@ body {
 
 
 /* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > Tercer Subcontenedor > */
+
+/* * * */
 
 
 
@@ -512,47 +509,218 @@ body {
     color: gray;
 }
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-/* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > Quinto Subcontenedor > */
 
 
-.contenedor-central-celular-enlaces-principales {
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+
+/* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > */
+
+
+
+.contenedor-pantalla-celular .segundo-contenedor-2 {
     display: flex;
-}
-
-.contenedor-central-celular-enlaces-principales-iconos {
-    margin-right: 20px;
-    width: 100%;
-}
-
-.contenedor-central-celular-enlaces-principales-iconos:last-child {
-    margin-right: 0;
-}
-
-.contenedor-central-celular-enlaces-principales-iconos-cajas {
     align-items: center;
-    background: #1a1a1a;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    display: flex;
-    height: 20px;
     justify-content: center;
-    padding: 20px;
+    padding: 15vh 3vh 3vh 3vh;
+    width: 100%;
+    height: 100vh;
 }
 
-.contenedor-central-celular-enlaces-principales-iconos-cajas img {
-    filter: invert(1);
-    height: 15px;
-    width: 15px;
+.contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras .campo-formulario-palabras {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vh;
 }
 
-.contenedor-central-celular-enlaces-principales-iconos-nombres {
-    margin-top: 30px;
+.contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras .campo-formulario-palabras input {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 6.95vh;
+    box-shadow: inset 0.28vh 0.28vh 1.11vh rgba(13, 39, 80, 0.36), 
+                inset -0.28vh -0.28vh 1.11vh rgba(255, 255, 255, 0.64);
+    display: flex;
+    flex-grow: 1;
+    padding: 1.5vh 3vh;
+    position: relative;
+    width: auto;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: gray;
+    font-size: 1.74vh;
+    background-color: white;
+}
+
+/* Estilo para el placeholder */
+.contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras .campo-formulario-palabras input::placeholder {
+    font-family: 'Times New Roman', Times, serif;
+    color: gray;
+    font-size: 1.74vh;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras .campo-formulario-palabras input[readonly] {
+    background-color: #e0e0e0;
+    color: gray;
+    cursor: not-allowed;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras .boton-enviar-palabras {
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 6.95vh;
+    color: gray;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.74vh;
+    justify-content: center;
+    margin-top: 2vh;
+    padding: 1.5vh 3vh;
     text-align: center;
+    width: 100%;
+    box-shadow: 
+        0.28vh 0.28vh 1.11vh rgba(0, 0, 0, 0.5),  /* Dark bottom shadow */
+        -0.28vh -0.28vh 1.11vh rgba(255, 255, 255, 0.8); /* White top shadow */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+.contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras .boton-enviar-palabras:hover {
+    background-color: #f0f0f0; /* Lighter background on hover */
+    box-shadow: 
+        0.38vh 0.38vh 1.3vh rgba(0, 0, 0, 0.6),  /* Stronger bottom shadow */
+        -0.38vh -0.38vh 1.3vh rgba(255, 255, 255, 0.9); /* Stronger top shadow */
+}
 
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+.contenedor-pantalla-celular .segundo-contenedor-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15vh 3vh 3vh 3vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .campo-formulario-palabras {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vh;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .campo-formulario-palabras input {
+    align-items: center;
+    background-color: transparent;
+    border-radius: 6.95vh;
+    box-shadow: inset 0.28vh 0.28vh 1.11vh rgba(13, 39, 80, 0.36), 
+                inset -0.28vh -0.28vh 1.11vh rgba(255, 255, 255, 0.64);
+    display: flex;
+    flex-grow: 1;
+    padding: 1.5vh 3vh;
+    position: relative;
+    width: auto;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: gray;
+    font-size: 1.74vh;
+    background-color: white;
+}
+
+/* Estilo para el placeholder */
+.contenedor-pantalla-celular .segundo-contenedor-3 .campo-formulario-palabras input::placeholder {
+    font-family: 'Times New Roman', Times, serif;
+    color: gray;
+    font-size: 1.74vh;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .campo-formulario-palabras input[readonly] {
+    background-color: #e0e0e0;
+    color: gray;
+    cursor: not-allowed;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .boton-enviar-palabras {
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 6.95vh;
+    color: gray;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.74vh;
+    justify-content: center;
+    margin-top: 2vh;
+    padding: 1.5vh 3vh;
+    text-align: center;
+    width: 100%;
+    box-shadow: 
+        0.28vh 0.28vh 1.11vh rgba(0, 0, 0, 0.5),  /* Dark bottom shadow */
+        -0.28vh -0.28vh 1.11vh rgba(255, 255, 255, 0.8); /* White top shadow */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .boton-enviar-palabras:hover {
+    background-color: #f0f0f0; /* Lighter background on hover */
+    box-shadow: 
+        0.38vh 0.38vh 1.3vh rgba(0, 0, 0, 0.6),  /* Stronger bottom shadow */
+        -0.38vh -0.38vh 1.3vh rgba(255, 255, 255, 0.9); /* Stronger top shadow */
+}
+
+
+
+/* Estilo para la sección "or" */
+.contenedor-pantalla-celular .segundo-contenedor-3 .linea-or {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2vh 0;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .linea-or .linea {
+    border: none;
+    border-top: 1px solid gray;
+    width: 30%;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .linea-or span {
+    padding: 0 1vw;
+    font-family: 'Times New Roman', Times, serif;
+    color: gray;
+    font-size: 1.74vh;
+}
+
+/* Estilo para el botón de eliminar palabra */
+.contenedor-pantalla-celular .segundo-contenedor-3 .boton-eliminar-palabra {
+    align-items: center;
+    background-color: white;
+    border: none;
+    border-radius: 6.95vh;
+    color: gray;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.74vh;
+    justify-content: center;
+    margin-top: 2vh;
+    padding: 1.5vh 3vh;
+    text-align: center;
+    width: 100%;
+    box-shadow: 
+        0.28vh 0.28vh 1.11vh rgba(0, 0, 0, 0.5),  /* Dark bottom shadow */
+        -0.28vh -0.28vh 1.11vh rgba(255, 255, 255, 0.8); /* White top shadow */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .boton-eliminar-palabra:hover {
+    background-color: #f0f0f0; /* Lighter background on hover */
+    box-shadow: 
+        0.38vh 0.38vh 1.3vh rgba(0, 0, 0, 0.6),  /* Stronger bottom shadow */
+        -0.38vh -0.38vh 1.3vh rgba(255, 255, 255, 0.9); /* Stronger top shadow */
+}

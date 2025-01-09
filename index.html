@@ -73,8 +73,7 @@
 
 
             <div class="segundo-subcontenedor"> 
-                <h2 class="titulo">Which word do you</h2>
-                <h2 class="titulo">wish to <span class="texto-resaltado">search?</span></h2>
+                <h2 class="titulo">Which word do you wish to <span class="texto-resaltado">search?</span></h2>
             </div> 
 
 
@@ -124,13 +123,81 @@
 
         </div>
 
+
+
+        <!-- Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > -->
+
+
+
         <div class="segundo-contenedor-2">
-            <p> HOLA1 </p><p> HOLA1 </p><p> HOLA1 </p>
+
+
+
+            <!-- Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > Primer Subcontenedor > -->
+
+
+
+            <div class="formulario-agregar-palabras">
+                <form id="formulario-palabras">
+                    <div class="campo-formulario-palabras">
+                        <input type="text" id="nombre-palabra" name="nombre" placeholder="enter the name" required>
+                    </div>
+                    <div class="campo-formulario-palabras">
+                        <input type="text" id="idioma-palabra" name="idioma" placeholder="enter the language" required>
+                    </div>
+                    <div class="campo-formulario-palabras">
+                        <input type="text" id="categoria-palabra" name="categoria" placeholder="enter the category" required>
+                    </div>
+                    <div class="campo-formulario-palabras">
+                        <input type="text" id="descripcion-palabra" name="descripcion" placeholder="enter a description" required>
+                    </div>
+                    <div class="campo-formulario-palabras">
+                        <input type="text" id="fecha-agregado-palabra" name="fecha_agregado" value="2025-01-02" readonly>
+                    </div>
+                    <button type="submit" class="boton-enviar-palabras">Add Word</button>
+                </form>
+            </div>
+            
+
+
+
+
         </div>
+            
+
 
         <div class="segundo-contenedor-3">
-            <p>HOLA 2</p>
-        </div>
+            <form id="formulario-modificar-palabra">
+                <div class="campo-formulario-palabras">
+                    <input type="text" name="nombre" placeholder="enter the name to modify" required>
+                </div>
+                <div class="campo-formulario-palabras">
+                    <input type="text" name="idioma" placeholder="enter the language to modify" required>
+                </div>
+                <div class="campo-formulario-palabras">
+                    <input type="text" name="categoria" placeholder="enter the category to modify" required>
+                </div>
+                <div class="campo-formulario-palabras">
+                    <input type="text" name="descripcion" placeholder="enter the description to modify" required>
+                </div>
+                <div class="campo-formulario-palabras">
+                    <input type="text" name="fecha_agregado" value="2025-01-02" readonly>
+                </div>
+                <button type="submit" class="boton-enviar-palabras">Modify Word</button>
+                
+                <!-- Línea con "or" -->
+                <div class="linea-or">
+                    <hr class="linea">
+                    <span>or</span>
+                    <hr class="linea">
+                </div>
+        
+                <!-- Botón para eliminar palabra -->
+                <button type="button" class="boton-eliminar-palabra">Delete Word</button>
+            </form>
+        </div>        
+        
+        
 
 
 

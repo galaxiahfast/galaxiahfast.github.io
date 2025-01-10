@@ -7,8 +7,8 @@
 
 body {
     align-items: center;
-    background-color: #d2d2d2;
-    color: black;
+    background-color: #ebecf0;
+    color: #778198;
     display: flex;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.74vh;
@@ -22,7 +22,7 @@ body {
 }
 
 .contenedor-pantalla-celular {
-    background-color: #e3e3e3;
+    background-color: #ebecf0;
     background-size: cover;
     border-radius: 2.5vh;
     box-shadow:
@@ -54,6 +54,9 @@ body {
     position: absolute;
     overflow: hidden;
     width: 100%;
+
+    background-color: white;
+    /* border: .1vh solid #930000; */ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 }
 
 
@@ -137,6 +140,8 @@ body {
     box-sizing: border-box;
     padding: 3vh;
     background: white;
+
+    /* border: .1vh solid #930000; */ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 }
 
 .contenedor-pantalla-celular .tercer-contenedor .icon-button {
@@ -511,9 +516,11 @@ body {
 
 
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/***************************************************************
+ *                    Estilo para el título                    *
+ *                         "Paginado"                          *
+ *                                                             *
+ ***************************************************************/
 
 
 
@@ -522,57 +529,64 @@ body {
 
 
 .contenedor-pantalla-celular .segundo-contenedor-2 {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 15vh 3vh 3vh 3vh;
-    width: 100%;
+    display: flex;
     height: 100vh;
+    justify-content: center;
+    padding: 9.5vh 3vh;
+    width: 100%;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras {
+    padding: 3vh;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras h1 {
+    font-size: 3.97vh;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 6vh 0;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras h1 .texto-resaltado {
+    color: #930000;
+    font-weight: 400;
 }
 
 .contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras .campo-formulario-palabras {
     display: flex;
-    flex-direction: column;
     margin-bottom: 3vh;
 }
 
 .contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras .campo-formulario-palabras input {
     align-items: center;
-    background-color: transparent;
+    background-color: #ebecf0;
+    border: none;
     border-radius: 6.95vh;
-    box-shadow: inset 0.28vh 0.28vh 1.11vh rgba(13, 39, 80, 0.36), 
-                inset -0.28vh -0.28vh 1.11vh rgba(255, 255, 255, 0.64);
+    box-shadow: inset 0.28vh 0.28vh 1vh rgb(0, 0, 0, .25), 
+                inset -0.28vh -0.28vh 1vh white;
+    color: #778198;
     display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.74vh;
     flex-grow: 1;
     padding: 1.5vh 3vh;
     position: relative;
     width: auto;
-    border: none;
-    font-family: 'Times New Roman', Times, serif;
-    color: gray;
-    font-size: 1.74vh;
-    background-color: white;
 }
 
-/* Estilo para el placeholder */
-.contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras .campo-formulario-palabras input::placeholder {
-    font-family: 'Times New Roman', Times, serif;
-    color: gray;
-    font-size: 1.74vh;
-}
-
-.contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras .campo-formulario-palabras input[readonly] {
-    background-color: #e0e0e0;
-    color: gray;
-    cursor: not-allowed;
+.contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras .campo-formulario-palabras input:focus {
+    outline: none;
 }
 
 .contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras .boton-enviar-palabras {
     align-items: center;
-    background-color: white;
+    background-color: #ebecf0;
     border: none;
     border-radius: 6.95vh;
-    color: gray;
+    box-shadow: 0.28vh 0.28vh 1vh rgb(0, 0, 0, .25), 
+                -0.28vh -0.28vh 1vh white;
+    color: #778198;
     cursor: pointer;
     display: flex;
     font-family: 'Times New Roman', Times, serif;
@@ -581,23 +595,23 @@ body {
     margin-top: 2vh;
     padding: 1.5vh 3vh;
     text-align: center;
-    width: 100%;
-    box-shadow: 
-        0.28vh 0.28vh 1.11vh rgba(0, 0, 0, 0.5),  /* Dark bottom shadow */
-        -0.28vh -0.28vh 1.11vh rgba(255, 255, 255, 0.8); /* White top shadow */
     transition: box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.contenedor-pantalla-celular .segundo-contenedor-2 .formulario-agregar-palabras .boton-enviar-palabras:hover {
-    background-color: #f0f0f0; /* Lighter background on hover */
-    box-shadow: 
-        0.38vh 0.38vh 1.3vh rgba(0, 0, 0, 0.6),  /* Stronger bottom shadow */
-        -0.38vh -0.38vh 1.3vh rgba(255, 255, 255, 0.9); /* Stronger top shadow */
+    width: 100%;
 }
 
 
 
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/***************************************************************
+ *                    Estilo para el título                    *
+ *                         "Paginado"                          *
+ *                                                             *
+ ***************************************************************/
+
+
+
+/* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > */
+
+
 
 .contenedor-pantalla-celular .segundo-contenedor-3 {
     display: flex;

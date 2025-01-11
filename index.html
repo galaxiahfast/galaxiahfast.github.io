@@ -138,7 +138,7 @@
 
 
             <div class="formulario-agregar-palabras">
-                <h1>Don't make any unnecessary <span class="texto-resaltado">mistake</span></h1>
+                <h1>Don't make any <span class="texto-resaltado">mistake</span></h1>
                 <form id="formulario-palabras">
                     <div class="campo-formulario-palabras">
                         <input type="text" id="nombre-palabra" name="nombre" placeholder="word or term name" required>
@@ -165,35 +165,238 @@
 
 
         <div class="segundo-contenedor-3">
-            <form id="formulario-modificar-palabra">
-                <div class="campo-formulario-palabras">
-                    <input type="text" name="nombre" placeholder="enter the name to modify" required>
-                </div>
-                <div class="campo-formulario-palabras">
-                    <input type="text" name="idioma" placeholder="enter the language to modify" required>
-                </div>
-                <div class="campo-formulario-palabras">
-                    <input type="text" name="categoria" placeholder="enter the category to modify" required>
-                </div>
-                <div class="campo-formulario-palabras">
-                    <input type="text" name="descripcion" placeholder="enter the description to modify" required>
-                </div>
-                <div class="campo-formulario-palabras">
-                    <input type="text" name="fecha_agregado" value="2025-01-02" readonly>
-                </div>
-                <button type="submit" class="boton-enviar-palabras">Modify Word</button>
-                
-                <!-- Línea con "or" -->
-                <div class="linea-or">
-                    <hr class="linea">
-                    <span>or</span>
-                    <hr class="linea">
-                </div>
-        
-                <!-- Botón para eliminar palabra -->
-                <button type="button" class="boton-eliminar-palabra">Delete Word</button>
-            </form>
+            
+            <div class="formulario-derechos">
+                <h1>Design by <span class="texto-resaltado">Ortiz</span></h1>
+                <p>&#169; 2025 Bachelor's in Computer Science - All Rights Reserved</p>
+                <form id="formulario-comentarios">
+                    <div class="campo-formulario-comentarios">
+                        <input type="text" id="comentarios-nombre" name="nombre" placeholder="Enter your name" required>
+                    </div>
+                    <div class="campo-formulario-comentarios">
+                        <input type="text" id="comentarios-derechos" name="comentarios" placeholder="Write your comments here..." required>
+                    </div>
+                    <div class="campo-formulario-comentarios">
+                        <input type="password" id="comentarios-contraseña" name="contraseña" placeholder="Enter password to edit/delete" required>
+                    </div>
+                    <div class="campo-formulario-comentarios">
+                        <div class="estrellas">
+                            <span class="estrella" data-valor="1">&#9733;</span>
+                            <span class="estrella" data-valor="2">&#9733;</span>
+                            <span class="estrella" data-valor="3">&#9733;</span>
+                            <span class="estrella" data-valor="4">&#9733;</span>
+                            <span class="estrella" data-valor="5">&#9733;</span>
+                        </div>
+                    </div>
+                    <div class="botones-comentarios">
+                        <button type="button" class="boton-enviar-comentarios">Send</button>
+                        <button type="button" class="boton-eliminar-comentarios">Clear</button>
+                    </div>
+                </form>
+                <ul id="lista-comentarios" class="lista-comentarios">
+                    <!-- Comments will appear here -->
+                </ul>
+            </div>
+            
+            
+            
+            
         </div>        
+        
+        
+
+        <script>
+            const comentarioInput = document.getElementById('comentarios-derechos');
+            const passwordInput = document.getElementById('comentarios-contraseña');
+            const nombreInput = document.getElementById('comentarios-nombre');
+            const enviarBtn = document.querySelector('.boton-enviar-comentarios');
+            const listaComentarios = document.getElementById('lista-comentarios');
+            const estrellas = document.querySelectorAll('.estrellas .estrella');
+            
+            let calificacionEstrella = 0;
+            
+            function agregarComentario(nombre, comentario, contraseña, calificacionEstrella) {
+                const nuevoComentario = {
+                    nombre: nombre,
+                    texto: comentario,
+                    password: contraseña,
+                    estrellas: calificacionEstrella,
+                    fecha: new Date().toLocaleDateString()
+                };
+            
+                const li = document.createElement('li');
+                const comentarioHeader = document.createElement('div');
+                comentarioHeader.classList.add('comentario-header');
+            
+                const iconoPersona = document.createElement('span');
+                iconoPersona.classList.add('icono-persona');
+                iconoPersona.textContent = '👤';
+            
+                const nombreElemento = document.createElement('div');
+                nombreElemento.classList.add('comentario-nombre');
+                nombreElemento.textContent = nombre;
+            
+                const iconoTresPuntos = document.createElement('button');
+                iconoTresPuntos.classList.add('icono-tres-puntos');
+                iconoTresPuntos.textContent = '⋮';
+            
+                const menuDesplegable = document.createElement('div');
+                menuDesplegable.classList.add('menu-desplegable');
+                menuDesplegable.innerHTML = `
+                    <button class="editar-btn">Edit</button>
+                    <button class="eliminar-btn">Delete</button>
+                `;
+                
+                comentarioHeader.appendChild(iconoPersona);
+                comentarioHeader.appendChild(nombreElemento);
+                comentarioHeader.appendChild(iconoTresPuntos);
+                comentarioHeader.appendChild(menuDesplegable);
+            
+                const comentarioElemento = document.createElement('div');
+                comentarioElemento.classList.add('comentario-texto');
+                comentarioElemento.textContent = comentario;
+            
+                const estrellasElemento = document.createElement('div');
+                estrellasElemento.classList.add('estrellas');
+                for (let i = 1; i <= 5; i++) {
+                    const estrella = document.createElement('span');
+                    estrella.classList.add('estrella');
+                    estrella.textContent = '★';
+                    if (i <= calificacionEstrella) {
+                        estrella.classList.add('seleccionada');
+                    }
+                    estrellasElemento.appendChild(estrella);
+                }
+            
+                const fechaElemento = document.createElement('div');
+                fechaElemento.classList.add('fecha-comentario');
+                fechaElemento.textContent = nuevoComentario.fecha;
+            
+                const estrellasYFechaElemento = document.createElement('div');
+                estrellasYFechaElemento.classList.add('estrellas-y-fecha');
+                estrellasYFechaElemento.appendChild(estrellasElemento);
+                estrellasYFechaElemento.appendChild(fechaElemento);
+            
+                const botones = document.createElement('div');
+                botones.classList.add('comentarios-botones-editar-eliminar');
+            
+                const editarBtn = document.createElement('button');
+                editarBtn.textContent = 'Edit';
+                const eliminarBtn = document.createElement('button');
+                eliminarBtn.textContent = 'Delete';
+            
+                botones.appendChild(editarBtn);
+                botones.appendChild(eliminarBtn);
+            
+                const iconosContenedor = document.createElement('div');
+                iconosContenedor.classList.add('iconos-comentario');
+            
+                const nombresIconos = [
+                    'bubble_chat.png',
+                    'heart.png',
+                    'save.png',
+                    'share.png'
+                ];
+            
+                nombresIconos.forEach(nombreArchivo => {
+                    const icono = document.createElement('img');
+                    icono.src = `static/images/mobile-phone-app-icons/reaction/${nombreArchivo}`;
+                    icono.alt = nombreArchivo.split('.')[0];
+                    iconosContenedor.appendChild(icono);
+                });
+            
+                li.appendChild(comentarioHeader);
+                li.appendChild(estrellasYFechaElemento);
+                li.appendChild(comentarioElemento);
+                li.appendChild(botones);
+                li.appendChild(iconosContenedor);
+            
+                listaComentarios.prepend(li);
+            
+                editarBtn.addEventListener('click', () => {
+                    const userPassword = prompt('Enter your password to edit this comment (edit):');
+                    if (userPassword === nuevoComentario.password) {
+                        const nuevoTexto = prompt('Edit your comment:', comentario);
+                        if (nuevoTexto) {
+                            nuevoComentario.texto = nuevoTexto;
+                            comentarioElemento.textContent = nuevoTexto;
+                        }
+                    } else {
+                        alert('Incorrect password!');
+                    }
+                });
+            
+                eliminarBtn.addEventListener('click', () => {
+                    const userPassword = prompt('Enter your password to delete this comment (delete):');
+                    if (userPassword === nuevoComentario.password) {
+                        li.remove();
+                    } else {
+                        alert('Incorrect password!');
+                    }
+                });
+            
+                iconoTresPuntos.addEventListener('click', (e) => {
+                    menuDesplegable.style.display = (menuDesplegable.style.display === 'block') ? 'none' : 'block';
+                    e.stopPropagation();
+                });
+            
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('.comentario-header')) {
+                        document.querySelectorAll('.menu-desplegable').forEach(menu => {
+                            menu.style.display = 'none';
+                        });
+                    }
+                });
+            }
+            
+            function agregarComentariosPorDefecto() {
+                agregarComentario(
+                    "Juan Pérez",
+                    "Este es un comentario largo que contiene una descripción detallada de mi experiencia. Quiero destacar lo impresionante que me pareció esta función y cómo puede beneficiar a los usuarios.",
+                    "password123",
+                    5
+                );
+            
+                agregarComentario(
+                    "María López",
+                    "Buen trabajo.",
+                    "password456",
+                    4
+                );
+            }
+            
+            enviarBtn.addEventListener('click', () => {
+                const nombre = nombreInput.value;
+                const comentario = comentarioInput.value;
+                const contraseña = passwordInput.value;
+            
+                if (nombre && comentario && contraseña && calificacionEstrella > 0) {
+                    agregarComentario(nombre, comentario, contraseña, calificacionEstrella);
+                    nombreInput.value = '';
+                    comentarioInput.value = '';
+                    passwordInput.value = '';
+                    calificacionEstrella = 0;
+                } else {
+                    alert('Please fill in all fields and select a star rating');
+                }
+            });
+            
+            estrellas.forEach(estrella => {
+                estrella.addEventListener('click', () => {
+                    calificacionEstrella = parseInt(estrella.dataset.valor);
+                    estrellas.forEach(star => {
+                        star.classList.remove('seleccionada');
+                    });
+                    for (let i = 0; i < calificacionEstrella; i++) {
+                        estrellas[i].classList.add('seleccionada');
+                    }
+                });
+            });
+            
+            agregarComentariosPorDefecto();
+            </script>
+            
+            
         
         
 

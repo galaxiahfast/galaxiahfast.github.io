@@ -614,127 +614,351 @@ body {
 
 
 .contenedor-pantalla-celular .segundo-contenedor-3 {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 15vh 3vh 3vh 3vh;
-    width: 100%;
+    display: flex;
     height: 100vh;
+    justify-content: center;
+    overflow: hidden;
+    padding: 7.8vh 3vh 0 3vh;
+    width: 100%;
 }
 
-.contenedor-pantalla-celular .segundo-contenedor-3 .campo-formulario-palabras {
-    display: flex;
-    flex-direction: column;
+.contenedor-pantalla-celular .segundo-contenedor-3::-webkit-scrollbar {
+    display: none;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos {
+    overflow: hidden;
+    padding: 3vh;
+    text-align: center;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 58vh;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos h1 {
+    font-size: 3.97vh;
+    font-weight: 400;
+    line-height: .7;
+    margin: 1.5vh 0 6vh 0;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos h1 .texto-resaltado {
+    color: #930000;
+    font-weight: 400;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos p {
+    color: #778198;
+    font-size: 1.74vh;
+    line-height: 1.5;
     margin-bottom: 3vh;
 }
 
-.contenedor-pantalla-celular .segundo-contenedor-3 .campo-formulario-palabras input {
-    align-items: center;
-    background-color: transparent;
+
+
+/* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > */
+
+
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .campo-formulario-comentarios {
+    margin-bottom: 3vh;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .campo-formulario-comentarios input {
+    background-color: #ebecf0;
+    border: none;
     border-radius: 6.95vh;
-    box-shadow: inset 0.28vh 0.28vh 1.11vh rgba(13, 39, 80, 0.36), 
-                inset -0.28vh -0.28vh 1.11vh rgba(255, 255, 255, 0.64);
-    display: flex;
-    flex-grow: 1;
+    box-shadow: inset 0.28vh 0.28vh 1vh rgb(0, 0, 0, .25), 
+                inset -0.28vh -0.28vh 1vh white;
+    box-sizing: border-box;
+    color: #778198;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.74vh;
     padding: 1.5vh 3vh;
+    width: 100%;
+}
+
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .campo-formulario-comentarios input:focus {
+    outline: none;
+}
+
+
+
+/* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > */
+
+
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .botones-comentarios {
+    display: flex;
+    gap: 2vh;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .botones-comentarios .boton-enviar-comentarios,
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .botones-comentarios .boton-eliminar-comentarios {
+    align-items: center;
+    background-color: #ebecf0;
+    border: none;
+    border-radius: 6.95vh;
+    box-shadow: 0.28vh 0.28vh 1vh rgb(0, 0, 0, .25), 
+                -0.28vh -0.28vh 1vh white;
+    color: #778198;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.74vh;
+    justify-content: center;
+    padding: 1.5vh 3vh;
+    text-align: center;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+}
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .botones-comentarios .boton-enviar-comentarios:hover,
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .botones-comentarios .boton-eliminar-comentarios:hover {
+    background-color: #d1d5db;
+    box-shadow: 0.28vh 0.28vh 1.5vh rgb(0, 0, 0, .35), 
+                -0.28vh -0.28vh 1.5vh white;
+}
+
+
+
+/* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > */
+
+/******************************************************************/
+/******************************************************************/
+/******************************************************************/
+/******************************************************************/
+/******************************************************************/
+/******************************************************************/
+/******************************************************************/
+/******************************************************************/
+
+
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .lista-comentarios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 1.5vh 0 0 0;
+}
+
+/* Alinear el nombre con el icono de tres puntos */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .lista-comentarios li {
+    color: #778198;
+    border-radius: 1vh;
+    box-shadow: 0.28vh 0.28vh 1.5vh rgb(0, 0, 0, .35), 
+                -0.28vh -0.28vh 1.5vh white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.74vh;
+    width: 100%;
+    line-height: 1.5;
+    margin-bottom: 3vh;
     position: relative;
+    padding-top: 3vh; /* Asegura que haya espacio arriba del comentario */
+}
+
+
+
+
+
+
+/* Estilo para el nombre y el icono de tres puntos */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .comentario-nombre {
+    font-size: 2vh;
+    font-weight: bold;
+    margin-bottom: 0.5vh; /* Separación entre nombre y estrellas */
+}
+
+/* Botones de editar y eliminar */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .comentarios-botones-editar-eliminar {
+    display: flex;
+    gap: 2vh;
+    width: 100%;
+    margin-top: 1vh;
+}
+
+/* Contenedor para el ícono, nombre y menú de tres puntos */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .comentario-header {
+    display: flex;
+    align-items: center; /* Alinea el ícono, el nombre y los tres puntos */
+    gap: 1.5vh; /* Espacio entre los elementos */
+    margin-bottom: 1vh; /* Espacio debajo del encabezado */
+}
+
+/* Estilo para el ícono de la silueta de la persona */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .comentario-header .icono-persona {
+    font-size: 2.5vh; /* Tamaño del ícono */
+    color: #555; /* Color del ícono */
+    font-family: 'Font Awesome 5 Free'; /* Fuente para los íconos (asegúrate de incluir FontAwesome si lo usas) */
+}
+
+/* Estilo para el nombre de la persona */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .comentario-header .comentario-nombre {
+    font-size: 2vh;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+
+
+/* Aseguramos que el menú se despliegue solo cuando el mouse pase por encima del icono de tres puntos */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .comentario-header .icono-tres-puntos {
+    font-size: 2vh;
+    color: #777;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Menú desplegable oculto por defecto */
+/* Menú desplegable oculto por defecto */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .comentario-header .menu-desplegable {
+    display: none;  /* Oculto por defecto */
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+
+/* No mostramos el menú al pasar el ratón, solo cuando se hace clic */
+
+
+
+
+
+
+/* Los botones de editar y eliminar estarán ocultos por defecto */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .lista-comentarios li .comentarios-botones-editar-eliminar {
+    display: none;
+    gap: 1vh;
+    position: absolute;
+    top: 3vh;
+    right: 1vh;
+    flex-direction: column;
+}
+
+/* Estilos para los botones de editar y eliminar */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .comentarios-botones-editar-eliminar button {
+    background-color: #ebecf0;
+    border: none;
+    border-radius: 6.95vh;
+    box-shadow: 0.28vh 0.28vh 1vh rgb(0, 0, 0, .25), 
+                -0.28vh -0.28vh 1vh white;
+    color: #778198;
+    cursor: pointer;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.74vh;
+    justify-content: center;
+    padding: 1.5vh 3vh;
+    text-align: center;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 100%;
+}
+
+/* Efecto hover sobre los botones */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .comentarios-botones-editar-eliminar button:hover {
+    background-color: #d1d5db;
+    box-shadow: 0.28vh 0.28vh 1.5vh rgb(0, 0, 0, .35), 
+                -0.28vh -0.28vh 1.5vh white;
+}
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */ 
+
+
+
+/* Estilo para las estrellas y la fecha */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .estrellas-y-fecha {
+    display: flex;
+    justify-content: left;
+    padding: 1.5vh 3vh;
+}
+
+/* Estilo para las estrellas */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .estrellas {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
     width: auto;
-    border: none;
-    font-family: 'Times New Roman', Times, serif;
-    color: gray;
-    font-size: 1.74vh;
-    background-color: white;
 }
 
-/* Estilo para el placeholder */
-.contenedor-pantalla-celular .segundo-contenedor-3 .campo-formulario-palabras input::placeholder {
-    font-family: 'Times New Roman', Times, serif;
-    color: gray;
-    font-size: 1.74vh;
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .estrellas .estrella {
+    width: auto;
+    font-size: 2.5vh;
+    color: #ddd;
+    transition: color 0.3s ease;
+    line-height: 0;
 }
 
-.contenedor-pantalla-celular .segundo-contenedor-3 .campo-formulario-palabras input[readonly] {
-    background-color: #e0e0e0;
-    color: gray;
-    cursor: not-allowed;
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .estrellas .estrella:hover,
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .estrellas .estrella.seleccionada {
+    color: #930000;
+    font-size: 2.5vh;
+    padding: 0;
+    line-height: 0;
 }
 
-.contenedor-pantalla-celular .segundo-contenedor-3 .boton-enviar-palabras {
-    align-items: center;
-    background-color: white;
-    border: none;
-    border-radius: 6.95vh;
-    color: gray;
-    cursor: pointer;
-    display: flex;
-    font-family: 'Times New Roman', Times, serif;
+/* Estilo para la fecha */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .fecha-comentario {
+    width: auto;
+    line-height: 1;
     font-size: 1.74vh;
-    justify-content: center;
-    margin-top: 2vh;
+    color: gray;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 1.5vh; 
+}
+
+
+
+
+
+
+
+
+/* Estilo para el comentario */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .comentario-texto {
+    font-size: 1.74vh;
+    color: #555;
+    line-height: 1.5;
     padding: 1.5vh 3vh;
-    text-align: center;
-    width: 100%;
-    box-shadow: 
-        0.28vh 0.28vh 1.11vh rgba(0, 0, 0, 0.5),  /* Dark bottom shadow */
-        -0.28vh -0.28vh 1.11vh rgba(255, 255, 255, 0.8); /* White top shadow */
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
-}
-
-.contenedor-pantalla-celular .segundo-contenedor-3 .boton-enviar-palabras:hover {
-    background-color: #f0f0f0; /* Lighter background on hover */
-    box-shadow: 
-        0.38vh 0.38vh 1.3vh rgba(0, 0, 0, 0.6),  /* Stronger bottom shadow */
-        -0.38vh -0.38vh 1.3vh rgba(255, 255, 255, 0.9); /* Stronger top shadow */
+    text-align: left; /* Justifica el texto dentro del contenedor */
 }
 
 
 
-/* Estilo para la sección "or" */
-.contenedor-pantalla-celular .segundo-contenedor-3 .linea-or {
+
+
+
+
+
+
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .iconos-comentario {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2vh 0;
+    justify-content: space-evenly;
+    padding: 1.5vh 3vh 3vh 3vh;
 }
 
-.contenedor-pantalla-celular .segundo-contenedor-3 .linea-or .linea {
-    border: none;
-    border-top: 1px solid gray;
-    width: 30%;
-}
-
-.contenedor-pantalla-celular .segundo-contenedor-3 .linea-or span {
-    padding: 0 1vw;
-    font-family: 'Times New Roman', Times, serif;
-    color: gray;
-    font-size: 1.74vh;
-}
-
-/* Estilo para el botón de eliminar palabra */
-.contenedor-pantalla-celular .segundo-contenedor-3 .boton-eliminar-palabra {
-    align-items: center;
-    background-color: white;
-    border: none;
-    border-radius: 6.95vh;
-    color: gray;
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .iconos-comentario img {
+    height: 1.87vh;
     cursor: pointer;
-    display: flex;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.74vh;
-    justify-content: center;
-    margin-top: 2vh;
-    padding: 1.5vh 3vh;
-    text-align: center;
-    width: 100%;
-    box-shadow: 
-        0.28vh 0.28vh 1.11vh rgba(0, 0, 0, 0.5),  /* Dark bottom shadow */
-        -0.28vh -0.28vh 1.11vh rgba(255, 255, 255, 0.8); /* White top shadow */
-    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-.contenedor-pantalla-celular .segundo-contenedor-3 .boton-eliminar-palabra:hover {
-    background-color: #f0f0f0; /* Lighter background on hover */
-    box-shadow: 
-        0.38vh 0.38vh 1.3vh rgba(0, 0, 0, 0.6),  /* Stronger bottom shadow */
-        -0.38vh -0.38vh 1.3vh rgba(255, 255, 255, 0.9); /* Stronger top shadow */
+.contenedor-pantalla-celular .segundo-contenedor-3 .formulario-derechos .iconos-comentario img:hover {
+    transform: scale(1.1);
 }

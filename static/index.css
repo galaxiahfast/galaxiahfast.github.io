@@ -8,7 +8,7 @@
 body {
     align-items: center;
     background-color: #ebecf0;
-    color: #778198;
+    color: gray;
     display: flex;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.74vh;
@@ -18,7 +18,14 @@ body {
     min-height: 100vh;
     height: 100vh;
     overflow: hidden;
+    padding-bottom: env(safe-area-inset-bottom);
     transform: translateY(-.5vh);
+    
+}
+
+img {
+    height: 1.87vh;
+    width: auto;
 }
 
 .contenedor-pantalla-celular {
@@ -50,14 +57,13 @@ body {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    padding: 3vh;
+    padding: 3vh 6vh;
     position: absolute;
     overflow: hidden;
     width: 100%;
 
-    background-color: rgba(255, 255, 255, 0.1);  /* Fondo semitransparente */
-    backdrop-filter: blur(10px);  /* Desenfoque del fondo */
-    /* border: .1vh solid #930000; */ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    /* border: .1vh solid #930000; */
+    /****************************************************************/
 }
 
 
@@ -69,41 +75,33 @@ body {
     margin-right: 0;
 }
 
-.contenedor-pantalla-celular .primer-contenedor .primer-subcontenedor img {
-    height: 1.87vh;
-    width: auto;
-}
-
-
-
 .contenedor-pantalla-celular .primer-contenedor .segundo-subcontenedor {
     align-items: center;
-    background-color: black;
-    border-radius: 0 0 1vh 1vh;
     box-sizing: border-box;
     display: flex;
-    height: 4vh;
     justify-content: center;
     left: 50%;
     position: absolute;
     transform: translateX(-50%);
-    top: 0vh;
-    width: 14vh;
-}
-
-.contenedor-pantalla-celular .primer-contenedor .segundo-subcontenedor .luz {
-    background-color: #e3e3e3;
-    border-radius: 5vh;
-    height: 1.39vh;
-    margin-right: 1.5vh;
-    width: 6.95vh;
 }
 
 .contenedor-pantalla-celular .primer-contenedor .segundo-subcontenedor .camara {
-    background-color: #e3e3e3;
+    background-color: #ebecf0;
+    box-shadow: inset 0.28vh 0.28vh 1vh rgb(0, 0, 0, .25), 
+                inset -0.28vh -0.28vh 1vh white;
     border-radius: 50%; 
-    height: 1.39vh; 
-    width: 1.39vh;
+    margin-right: 1.5vh;
+    height: 1.5vh; 
+    width: 1.5vh;
+}
+
+.contenedor-pantalla-celular .primer-contenedor .segundo-subcontenedor .luz {
+    background-color: #ebecf0;
+    box-shadow: inset 0.28vh 0.28vh 1vh rgb(0, 0, 0, .25), 
+                inset -0.28vh -0.28vh 1vh white;
+    border-radius: 5vh;
+    height: 1.5vh;
+    width: 6.95vh;
 }
 
 
@@ -117,12 +115,6 @@ body {
 .contenedor-pantalla-celular .primer-contenedor .tercer-subcontenedor img {
     height: 1.87vh;
     width: 1.87vh;
-}
-
-.contenedor-pantalla-celular .primer-contenedor .tercer-subcontenedor .bateria {
-    align-items: center;
-    display: flex;
-    gap: .1vh;
 }
 
 
@@ -141,10 +133,9 @@ body {
     box-sizing: border-box;
     padding: 3vh;
     
-    
-    background-color: rgba(255, 255, 255, 0.1);  /* Fondo semitransparente */
-    backdrop-filter: blur(10px);  /* Desenfoque del fondo */
-    /* border: .1vh solid #930000; */ /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+    background-color: transparent;
+    /* border: .1vh solid #930000; */
+    /****************************************************************/
 }
 
 .contenedor-pantalla-celular .tercer-contenedor .icon-button {
@@ -155,7 +146,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0;
-    position: relative; /* Esto es importante para posicionar la línea relativa al botón */
+    position: relative;
 }
 
 /* Estilo de la imagen */
@@ -186,16 +177,15 @@ body {
 
 /* Ubicación: Pantalla > Pantalla Celular > Segundo Contenedor > */
 
-
-
 .contenedor-pantalla-celular .segundo-contenedor {
-    bottom: 6.8vh;
+    bottom: 7.9vh;
     box-sizing: border-box;
     overflow-y: scroll;
-    padding: 0 3vh;
+    padding: 0vh 6vh;
     position: absolute;
     top: 7.9vh;
     width: 100%;
+    /* border: 0.1vh solid #930000;*/
 }
 
 .contenedor-pantalla-celular .segundo-contenedor::-webkit-scrollbar {

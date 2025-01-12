@@ -3,7 +3,10 @@
 
 /* Ubicación: Pantalla > Pantalla Celular > */
 
-/*
+
+
+/* Estilos generales para el body */
+/* Estilos generales para el body */
 body {
     align-items: center;
     background-color: #ebecf0;
@@ -15,37 +18,32 @@ body {
     line-height: 0;
     margin: 0;
     min-height: 100vh;
-    height: 100vh;
     overflow: hidden;
-    padding-bottom: env(safe-area-inset-bottom);
-    transform: translateY(-.5vh);
-    
-}
-*/
-
-
-body {
-    align-items: center;
-    background-color: #ebecf0;
-    color: gray;
-    display: flex;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.74vh;
-    justify-content: center;
-    line-height: 0;
-    margin: 0;
-    min-height: 100vh; /* Cambiado para evitar usar height */
-    overflow: hidden;
-    padding-top: env(safe-area-inset-top); /* Añadir padding-top */
-    padding-bottom: env(safe-area-inset-bottom); /* Mantener el padding inferior */
-    transform: translateY(0); /* Remover el translateY negativo */
+    padding-bottom: env(safe-area-inset-bottom); /* Asegura que no se solape con la barra de navegación */
+    transform: translateY(-.5vh); /* Ajuste fino para evitar desplazamientos */
 }
 
+/* Ajustes para pantallas de dispositivos móviles */
+@media (max-width: 768px) {
+    body {
+        height: 100vh; /* Utiliza 100vh para asegurar que el body ocupe toda la altura del viewport */
+        padding-bottom: env(safe-area-inset-bottom); /* Agrega espacio adicional si hay una barra flotante */
+    }
+}
+
+/* Asegura que el viewport se ajuste correctamente */
+@viewport {
+    width: device-width;
+    zoom: 1;
+}
+
+/* Estilos para las imágenes */
 img {
     height: 1.87vh;
     width: auto;
 }
 
+/* Contenedor para la pantalla celular */
 .contenedor-pantalla-celular {
     background-color: #ebecf0;
     background-size: cover;
@@ -61,10 +59,8 @@ img {
     justify-content: center;
     overflow: hidden;
     position: relative;
-    width: calc(80vh * 9 / 16);
+    width: calc(80vh * 9 / 16); /* Proporción de aspecto 16:9 */
 }
-
-
 
 /* Ubicación: Pantalla > Pantalla Celular > Primer Contenedor > */
 

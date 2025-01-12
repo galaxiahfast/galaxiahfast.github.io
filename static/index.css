@@ -5,8 +5,6 @@
 
 
 
-/* Estilos generales para el body */
-/* Estilos generales para el body */
 body {
     align-items: center;
     background-color: #ebecf0;
@@ -15,35 +13,25 @@ body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.74vh;
     justify-content: center;
+    align-items: center;
     line-height: 0;
     margin: 0;
     min-height: 100vh;
+    height: -webkit-fill-available;
     overflow: hidden;
-    padding-bottom: env(safe-area-inset-bottom); /* Asegura que no se solape con la barra de navegación */
-    transform: translateY(-.5vh); /* Ajuste fino para evitar desplazamientos */
+    transform: translateY(-.5vh);
+    
 }
 
-/* Ajustes para pantallas de dispositivos móviles */
-@media (max-width: 768px) {
-    body {
-        height: 100vh; /* Utiliza 100vh para asegurar que el body ocupe toda la altura del viewport */
-        padding-bottom: env(safe-area-inset-bottom); /* Agrega espacio adicional si hay una barra flotante */
-    }
+html{
+    height: -webkit-fill-available;
 }
 
-/* Asegura que el viewport se ajuste correctamente */
-@viewport {
-    width: device-width;
-    zoom: 1;
-}
-
-/* Estilos para las imágenes */
 img {
     height: 1.87vh;
     width: auto;
 }
 
-/* Contenedor para la pantalla celular */
 .contenedor-pantalla-celular {
     background-color: #ebecf0;
     background-size: cover;
@@ -59,8 +47,10 @@ img {
     justify-content: center;
     overflow: hidden;
     position: relative;
-    width: calc(80vh * 9 / 16); /* Proporción de aspecto 16:9 */
+    width: calc(80vh * 9 / 16);
 }
+
+
 
 /* Ubicación: Pantalla > Pantalla Celular > Primer Contenedor > */
 
@@ -71,7 +61,7 @@ img {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    padding: 3vh;
+    padding: 3vh 6vh;
     position: absolute;
     overflow: hidden;
     width: 100%;
@@ -87,6 +77,11 @@ img {
     display: flex;
     gap: 1.5vh;
     margin-right: 0;
+}
+
+.contenedor-pantalla-celular .primer-contenedor .primer-subcontenedor div{
+    font-size: 2vh;
+    
 }
 
 .contenedor-pantalla-celular .primer-contenedor .segundo-subcontenedor {

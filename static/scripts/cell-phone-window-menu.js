@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
   const userHover = 'static/images/mobile-phone-icons/user_.png';
   const contenedorPantalla = document.querySelector('.contenedor-pantalla-celular');
   const contenedor1 = document.querySelector('.segundo-contenedor');
-  const contenedor2 = document.querySelector('.segundo-contenedor-2');
-  const contenedor3 = document.querySelector('.segundo-contenedor-3');
+  const contenedor2 = document.querySelector('.segundo-contenedor-3');
+  const contenedor3 = document.querySelector('.segundo-contenedor-2');
 
   function changeImageOnHover(button, hoverSrc) {
       const img = button.querySelector('img');

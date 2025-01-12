@@ -3,9 +3,8 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="stylesheet" href="static/index.css">
-    <link rel="stylesheet" href="static/index-mobile.css">
     <script src="static/scripts/database.js"></script>
     
 </head>
@@ -62,7 +61,7 @@
             <div class="primer-subcontenedor">
                 <p>Morning, Emiliano</p>
                 <div class="icono-notificacion">
-                    <img src="static/images/mobile-phone-app-icons/notifications.png" alt="Notification">
+                    <!-- <img src="static/images/mobile-phone-app-icons/notifications.png" alt="Notification"> -->
                 </div>
             </div>
 
@@ -85,7 +84,7 @@
             <div class="tercer-subcontenedor">
                 <div class="primer-subsubcontenedor">
                     <img src="static/images/mobile-phone-app-icons/search/magnifying-glass.png" class="icono-de-lupa" alt="Magnifying Glass">
-                    <input type="text" id="campo-de-busqueda" placeholder="category, letter, word" class="campo-de-busqueda" onkeyup="buscarSugerencias()" onfocus="mostrarResultadosBusqueda()" onblur="ocultarResultadosBusqueda()" onclick="seleccionarTexto()">
+                    <input type="text" id="campo-de-busqueda" placeholder="word or letter" class="campo-de-busqueda" onkeyup="buscarSugerencias()" onfocus="mostrarResultadosBusqueda()" onblur="ocultarResultadosBusqueda()" onclick="seleccionarTexto()">
                     <img src="static/images/mobile-phone-app-icons/search/three-dots.png" class="icono-tres-puntos" alt="Three Dots">
                     <div id="resultados-busqueda" class="resultados-busqueda"></div>
                 </div>

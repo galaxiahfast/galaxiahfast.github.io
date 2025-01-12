@@ -3,8 +3,7 @@
 
 /* Ubicación: Pantalla > Pantalla Celular > */
 
-
-
+/*
 body {
     align-items: center;
     background-color: #ebecf0;
@@ -21,6 +20,25 @@ body {
     padding-bottom: env(safe-area-inset-bottom);
     transform: translateY(-.5vh);
     
+}
+*/
+
+
+body {
+    align-items: center;
+    background-color: #ebecf0;
+    color: gray;
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.74vh;
+    justify-content: center;
+    line-height: 0;
+    margin: 0;
+    min-height: 100vh; /* Cambiado para evitar usar height */
+    overflow: hidden;
+    padding-top: env(safe-area-inset-top); /* Añadir padding-top */
+    padding-bottom: env(safe-area-inset-bottom); /* Mantener el padding inferior */
+    transform: translateY(0); /* Remover el translateY negativo */
 }
 
 img {
@@ -57,7 +75,7 @@ img {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    padding: 3vh 6vh;
+    padding: 3vh;
     position: absolute;
     overflow: hidden;
     width: 100%;
